@@ -7,8 +7,8 @@ const Navbar = () => {
     const menuItems =
         <>
             <li className="hover:text-white" ><Link  to="/">Home</Link></li>
-            <li className="hover:text-white" ><Link  to="/">Show Users</Link></li>
-            <li className="hover:text-white" ><Link  to="/">Add Users</Link></li>
+            <li className="hover:text-white" ><Link  to="/showbooks">Show Books</Link></li>
+            <li className="hover:text-white" ><Link  to="/addbooks">Add Books</Link></li>
          
             
         </>
