@@ -1,10 +1,11 @@
 import React from 'react';
+import ShowBooks from './ShowBooks';
 
 const Home = () => {
     return (
         <div>
-            <h2 className="text-2xl text-center">
-                Home
+            <h2>
+                <ShowBooks/>
             </h2>
         </div>
     );
