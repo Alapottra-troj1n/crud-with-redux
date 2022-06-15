@@ -31,7 +31,10 @@ const ShowBooks = () => {
                             <th>{book.id}</th>
                             <td>{book.title}</td>
                             <td>{book.author}</td>
-                            <td></td>
+                            <td>
+                                <button className="btn btn-primary btn-xs mx-1">Edit</button>
+                                <button className="btn btn-primary btn-xs mx-1">Delete</button>
+                            </td>
                             </tr>
                             </>
                         )
