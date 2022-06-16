@@ -15,6 +15,8 @@ const AddBooks = () => {
         const book = {title, author, id : numberOfBooks + 1};
         console.log(book);
         dispatch(addBook(book))
+        setTitle('')
+        setAuthor('')
 
     }
 
