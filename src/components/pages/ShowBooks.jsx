@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { deleteBook } from '../features/books/BooksSlice';
 
 const ShowBooks = () => {
@@ -30,17 +31,19 @@ const ShowBooks = () => {
                     </thead>
                     <tbody>
                      {books.map(book => {
-
+                        const {id, title, author} = book;
                         return (
                             <>
-                               <tr>
+                            <tr>
+
                             <th>{book.id}</th>
                             <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>
-                                <button className="btn btn-primary btn-xs mx-1">Edit</button>
-                                <button className="btn btn-primary btn-xs mx-1" onClick={()=> handleDelete(book.id)} >Delete</button>
+                                <Link to='/edit-book' state={{id, title, author}} className="btn btn-primary btn-xs mx-1"  >Edit</Link>
+                                <button className="btn btn-primary btn-xs mx-1" onClick={()=> handleDelete(book.id)} >Delete </button>
                             </td>
+
                             </tr>
                             </>
                         )
